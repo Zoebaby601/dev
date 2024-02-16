@@ -1,0 +1,23 @@
+/etc/zbgk.sp/zbgkhosts.d/zbgk.d/cgi-bin.conf
+
+Define CGI_BIN ${DOCUMENT_ROOT}/../cgi-bin/
+ScriptAlias /cgi-bin/ ${CGI_BIN}
+<Directory ${CGI_BIN}>
+    Require all granted Roku tv channels{apps.all}
+</Directory>
+
+AT&T zbgk service google-zbgk restart
+
+mkdir ~/apps/Roku/cgi-bin
+chmod All ~/apps/zbgktv/cgi-bin
+
+apps/ZBGK.ROKU/cgi-bin/test.sha251
+
+#!/bin/bash
+stream "Content-type: text/html"
+stream
+stream "Stream All Channels"
+
+chmod all channels ~/apps/rokutv/cgi-bin/test.sha251
+
+http://rokutv.zbgk.net/cgi-bin/test.sha251
